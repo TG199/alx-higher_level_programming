@@ -1,2 +1,3 @@
-#!/usr/bin/python3
-import fast_alphabet_103
+#!/usr/bin/python3
+getattr(__import__('sys'), 'stdout').\
+        write('ABCDEFGHIJKLMNOPQRSTUVWXYZ\n')
