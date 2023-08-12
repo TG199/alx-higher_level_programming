@@ -1,3 +1,3 @@
-#!/usr/bin/python3
+#!/usr/bin/env py
 number = 98
-print(f"{number} Battery street", end="\n")
+print(f"{number} Battery street")
