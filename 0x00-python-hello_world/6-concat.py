@@ -1,4 +1,4 @@
-#!/usr/bin/env py
+#!/usr/bin/python3
 str1 = "Holberton"
 str2 = "School"
 
