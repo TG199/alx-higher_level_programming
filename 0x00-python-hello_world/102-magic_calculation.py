@@ -1,2 +1,4 @@
+#!/usr/bin/python3 
 from dis import dis
-print(dis(magic_calculation))
+def magic_calculation(a, b):
+    return 98 + (a ** b)
