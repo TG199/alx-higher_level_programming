@@ -1,3 +1,3 @@
-#!/usr/bin/python3
-import this
-
+#!/usr/bin/env py
+import this 
+"\n"
