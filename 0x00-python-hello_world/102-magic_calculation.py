@@ -1,2 +1,2 @@
-import dis
-dis.dis(magic_calculation)
+from dis import dis
+print(dis(magic_calculation))
