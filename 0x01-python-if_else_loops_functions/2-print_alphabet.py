@@ -1,3 +1,3 @@
-#!/usr/bin/python3
+#!/usr/bin/env py
 for ch in range(97, 123):
-    print("{}".format(chr(ch)), end="")
+    print("{0}".format(chr(ch)), end="")
