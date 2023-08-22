@@ -1,4 +1,6 @@
-#!/usr/bin/python3
+#!/usr/bin/env py
+
+    
 def add(a, b):
     """My addition function
 
@@ -10,6 +12,3 @@ def add(a, b):
         The return value. a + b
     """
     return (a + b)
-if __name__ == "__main__":
-    pass
-
