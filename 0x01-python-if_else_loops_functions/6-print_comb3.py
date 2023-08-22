@@ -1,4 +1,4 @@
-#!/usr/bin/python3
+#!/usr/bin/python
 
 for i in range(0, 90):
     if i % 10 > i / 10:
