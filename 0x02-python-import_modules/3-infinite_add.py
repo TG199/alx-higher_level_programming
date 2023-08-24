@@ -3,7 +3,8 @@ from sys import argv
 
 if __name__ == "__main__":
     total = 0
-    for i in range(1, (len(argv))):
-        total += int(argv[i])
+    for i in argv:
+        if i != argv[0]:
+            total += int(i)
 
     print("{}".format(total), end="\n")
