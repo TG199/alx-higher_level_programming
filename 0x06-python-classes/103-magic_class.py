@@ -3,7 +3,8 @@ import math
 
 
 class MagicClass:
-    """A magical class that performs calculations based on radius."""
+    """A magical class that performs calculations based on radius.
+    """
 
     def __init__(self, radius):
         """
