@@ -5,12 +5,8 @@
 class Rectangle:
     """ Defines a Rectangle class """
     def __init__(self, width=0, height=0):
-        """ Initializes instance
-        Args:
-            width: width of the rectangle
-            height: height of the rectangle
+        """ Initializes instances """
 
-        """
         self.width = width
         self.height = height
 
