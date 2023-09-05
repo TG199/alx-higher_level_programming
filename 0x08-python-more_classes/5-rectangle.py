@@ -104,4 +104,4 @@ class Rectangle:
     def __del__(self):
         """Method to handle deletion of an instance
         """
-        print("Bye Rectangle{}".format("..."))
+        print("Bye rectangle...")
