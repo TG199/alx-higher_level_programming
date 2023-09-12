@@ -1,4 +1,7 @@
 #!/usr/bin/python3
+"""This module is about checking for instance
+    of a class
+"""
 
 
 def inherits_from(obj, a_class):
