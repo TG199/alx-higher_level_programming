@@ -11,5 +11,4 @@ def read_file(filename=""):
     Returns: Number of bytes read
     """
     with open(filename, mode='r', encoding='utf-8') as file:
-         file_content = file.read()
-         print(file_content)
+        print(file.read())
