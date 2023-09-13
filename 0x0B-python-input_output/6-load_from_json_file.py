@@ -10,7 +10,6 @@ def load_from_json_file(filename):
     Returns: An object
     """
     import json
-    with open(filename, encoding='utf-8') as file:
-        json_rep = json.dumps(filename)
-        python_obj = json.loads(json_rep)
+    with open(filename, 'r', encoding='utf-8') as file:
+        python_obj = json.load(file)
         return python_obj
