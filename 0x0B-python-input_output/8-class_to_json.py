@@ -11,5 +11,4 @@ def class_to_json(obj):
         obj: class object
     Returns: Dictionary description
     """
-    import json
-    return json.dumps(obj.__dict__)
+    return obj.__dict__
