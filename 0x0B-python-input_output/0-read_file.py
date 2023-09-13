@@ -10,11 +10,6 @@ def read_file(filename=""):
 
     Returns: Number of bytes read
     """
-    try:
-        with open(filename, 'r', encoding='utf-8') as file:
-            file_content = file.read()
-            print(file_content)
-    except FileNotFoundError:
-        print(f"The file '{filename}' was not found")
-    except IOError:
-        print(f"An error occurred while reading the file '{filename}'.")
+    with open(filename, mode='r', encoding='utf-8') as file:
+         file_content = file.read()
+         print(file_content)
