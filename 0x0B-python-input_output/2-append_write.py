@@ -19,4 +19,3 @@ def append_write(filename="", text=""):
             file.write(char)
             char_appended += 1
         return char_appended
-
