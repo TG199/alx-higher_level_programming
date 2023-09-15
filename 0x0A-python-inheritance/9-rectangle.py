@@ -19,9 +19,9 @@ class BaseGeometry:
         """Validates an integer"""
 
         if type(value) is not int:
-            raise TypeError("<name> must be an integer")
+            raise TypeError("{name} must be an integer")
         if value <= 0:
-            raise ValueError("name> must be greater than 0")
+            raise ValueError("{name} must be greater than 0")
 
         self.name = name
         self.value = value
@@ -35,13 +35,13 @@ class Rectangle(BaseGeometry):
 
     def __init__(self, width, height):
         """initialises attributtes of Rectangle class"""
+        super().__init__(width,height)
         self.integer_validator("width", width)
         self.integer_validator("height", height)
-        self.__height = height
-        self.__width = width
+    
         
     def area(self):
-        return self.__width * self.__height
+        return self._BaseGeometry__width * self._BaseGeometry__height
     
     def __str__(self):
         return f'[Rectangle] {self.__width} / {self.__height}'
