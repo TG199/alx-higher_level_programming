@@ -25,9 +25,6 @@ class BaseGeometry:
 
         self.name = name
         self.value = value
-        
-    def __str__(self):
-        return f'[Rectangle] {self.__width} / {self.__height}'
 
 
 class Rectangle(BaseGeometry):
@@ -44,5 +41,5 @@ class Rectangle(BaseGeometry):
         return self._BaseGeometry__width * self._BaseGeometry__height
     
     def __str__(self):
-        return f'[Rectangle] {self.__width} / {self.__height}'
+        return f'[Rectangle] {self._BaseGeometry__width} / {self._BaseGeometry__height}'
 
