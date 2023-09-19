@@ -56,8 +56,6 @@ class Rectangle(Base):
         optional parameter and if not provided, it will
         be set to `None`
         """
-        super().__init__(id)
-
         self.int_validator("width", width)
         self.int_validator("height", height)
         self.int_validator("x", x)
@@ -67,6 +65,8 @@ class Rectangle(Base):
         self.__height = height
         self.__x = x
         self.__y = y
+        super().__init__(id)
+
 
     @property
     def width(self):
