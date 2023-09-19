@@ -64,10 +64,10 @@ class Rectangle(Base):
         int_validator("x", x)
         int_validator("y", y)
 
-        self.width = width
-        self.height = height
-        self.x = x
-        self.y = y
+        self.__width = width
+        self.__height = height
+        self.__x = x
+        self.__y = y
 
     @property
     def width(self):
