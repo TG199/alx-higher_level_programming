@@ -244,5 +244,9 @@ class Rectangle(Base):
         string includes the object's id, x and y coordinates,
         width, and height.
         """
-        return f'[Rectangle]({self.id}) {self.x}/{self.y} \
-            - {self.width}/{self.height}'
+        str_rectangle = "[Rectangle] "
+        str_id = "({}) ".format(self.id)
+        str_xy = "{}/{} - ".format(self.x, self.y)
+        str_wh = "{}/{}".format(self.width, self.height)
+
+        return str_rectangle + str_id + str_xy + str_wh
