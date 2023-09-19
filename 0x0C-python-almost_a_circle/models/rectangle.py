@@ -6,6 +6,7 @@
 from models.base import Base
 from models.validator import int_validator
 
+
 class Rectangle(Base):
     """ The Rectangle class is a subclass of the Base class."""
 
@@ -33,12 +34,12 @@ class Rectangle(Base):
         optional parameter and if not provided, it will
         be set to `None`
         """
-        
+
         int_validator("width", width)
         int_validator("height", height)
         int_validator("x", x)
         int_validator("y", y)
-        
+
         self.width = width
         self.height = height
         self.x = x
