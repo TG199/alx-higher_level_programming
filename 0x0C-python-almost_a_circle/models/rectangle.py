@@ -4,8 +4,31 @@
 
 
 from models.base import Base
-from models.validator import int_validator
 
+
+
+def int_validator(name, value):
+    """
+    The function `int_validator` checks if a given value
+    is an integer and meets certain conditions
+    based on the name parameter.
+
+    Args:
+    name: The name parameter is a string that represents
+    the name of the variable being validated. It
+    can be one of the following: "width", "height", "x", or "y".
+    value: The value parameter is the value that needs to be
+    validated. It can be any data type, but
+    the function specifically checks if it is an integer.
+    """
+    if type(value) is not int:
+            raise TypeError(f'{name} must be an intger')
+    elif name in ["width", "height"]:
+            if value <= 0:
+                raise ValueError(f'{name} must be > 0')
+    elif name in ["x", "y"]:
+        if value < 0:
+            raise ValueError(f'{name} must be >= 0')
 
 class Rectangle(Base):
     """ The Rectangle class is a subclass of the Base class."""
@@ -34,6 +57,7 @@ class Rectangle(Base):
         optional parameter and if not provided, it will
         be set to `None`
         """
+        super().__init__(id)
 
         int_validator("width", width)
         int_validator("height", height)
@@ -44,7 +68,6 @@ class Rectangle(Base):
         self.height = height
         self.x = x
         self.y = y
-        super().__init__(id)
 
     @property
     def width(self):
@@ -65,10 +88,6 @@ class Rectangle(Base):
         the width of an object. It is expected to be
         an integer value greater than zero
         """
-        '''if type(width) is not int:
-            raise TypeError(f'width must be an intger')
-        if width <= 0:
-            raise ValueError('width must be > 0')'''
         int_validator("width", width)
         self.__width = width
 
@@ -94,10 +113,6 @@ class Rectangle(Base):
         be raised. If it is less than or equal to 0, a
         ValueError will be raised. Otherwise, the
         """
-        '''if type(height) is not int:
-            raise TypeError('height must be an intger')
-        if height <= 0:
-            raise ValueError('height must be > 0')'''
         int_validator("height", height)
 
         self.__height = height
@@ -123,10 +138,7 @@ class Rectangle(Base):
         that represents a value to be assigned to the
         attribute "__x" of an object
         """
-        '''if type(x) is not int:
-            raise TypeError("x must be an integer")
-        if x < 0:
-            raise ValueError('x must be >= 0')'''
+        
         int_validator("x", x)
 
         self.__x = x
