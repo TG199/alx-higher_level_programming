@@ -16,13 +16,11 @@ def int_validator(name, value):
     validated. It can be any data type, but
     the function specifically checks if it is an integer.
     """
-    if name in ["width", "height",]:
-        if type(value) is not int:
+    if type(value) is not int:
             raise TypeError(f'{name} must be an intger')
-        elif value <= 0:
-            raise ValueError(f'{name} must be > 0')
-    if name in ["x", "y"]:
-        if type(value) is not int:
-            raise TypeError(f'{name} must be an intger')
-        elif value < 0:
+    elif name in ["width", "height"]:
+            if value <= 0:
+                raise ValueError(f'{name} must be > 0')
+    elif name in ["x", "y"]:
+        if value < 0:
             raise ValueError(f'{name} must be >= 0')
