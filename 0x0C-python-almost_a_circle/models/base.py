@@ -1,10 +1,13 @@
 #!/usr/bin/python3
-import json
+
 """Base class module"""
 
 
+import json
+
+
 class Base:
-    # The above class is a base class.
+    """The above class is a base class."""
 
     __nb_objects = 0  # private attribute
 
