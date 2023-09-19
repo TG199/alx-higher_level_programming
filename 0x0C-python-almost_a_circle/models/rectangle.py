@@ -1,4 +1,5 @@
 #!/usr/bin/python3
+"""Rectangle class module"""
 from models.base import Base
 
 
@@ -30,11 +31,11 @@ class Rectangle(Base):
         be set to `None`
         """
 
+        self.width = width
+        self.height = height
+        self.x = x
+        self.y = y
         super().__init__(id)
-        self.__width = width
-        self.__height = height
-        self.__x = x
-        self.__y = y
 
     @property
     def width(self):
@@ -110,6 +111,8 @@ class Rectangle(Base):
         that represents a value to be assigned to the
         attribute "__x" of an object
         """
+        if type(x) is not int:
+            raise TypeError("x must be an integer")
         if x < 0:
             raise ValueError('x must be >= 0')
         self.__x = x
@@ -135,6 +138,8 @@ class Rectangle(Base):
         represents a coordinate or position on a vertical
         axis
         """
+        if type(y) is not int:
+            raise TypeError("y must be an integer")
         if y < 0:
             raise ValueError('y must be >= 0')
         self.__y = y
@@ -182,6 +187,27 @@ class Rectangle(Base):
         for key, value in kwargs.items():
             setattr(self, key, value)
 
+    def to_dictionary(self):
+        """
+        The function `to_dictionary` returns a dictionary containing
+        the attributes of an object.
+
+        Returns:
+          a dictionary with the following key-value pairs:
+        - 'id': the value of self.id
+        - 'width': the value of self.width
+        - 'height': the value of self.height
+        - 'x': the value of self.x
+        - 'y': the value of self.y
+        """
+        return {
+            'id': self.id,
+            'width': self.width,
+            'height': self.height,
+            'x': self.x,
+            'y': self.y
+        }
+
     def __str__(self):
         """
         The above function returns a string representation
@@ -191,5 +217,5 @@ class Rectangle(Base):
         string includes the object's id, x and y coordinates,
         width, and height.
         """
-        return f'[Rectangle]({self.id}) {self.__x}/{self.__y}
-        - {self.__width}/{self.__height}'
+        return f'[Rectangle]({self.id}) {self.x}/{self.y} \
+            - {self.width}/{self.height}'
