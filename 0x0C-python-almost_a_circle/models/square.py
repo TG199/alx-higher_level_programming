@@ -104,4 +104,9 @@ class Square(Rectangle):
           that represents the Square object. It
         includes the id, x and y coordinates, and the width of the square.
         """
-        return f'[Square] ({self.id}) {self.x}/{self.y} - {self.width}'
+        str_square = "[Square] "
+        str_id = "({}) ".format(self.id)
+        str_xy = "{}/{} - ".format(self.x, self.y)
+        str_wh = "{}/{}".format(self.width, self.height)
+
+        return str_square + str_id + str_xy + str_wh
