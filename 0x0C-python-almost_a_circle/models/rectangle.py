@@ -4,7 +4,7 @@
 
 
 from models.base import Base
-
+from models.validator import int_validator
 
 class Rectangle(Base):
     """ The Rectangle class is a subclass of the Base class."""
@@ -33,7 +33,12 @@ class Rectangle(Base):
         optional parameter and if not provided, it will
         be set to `None`
         """
-
+        
+        int_validator("width", width)
+        int_validator("height", height)
+        int_validator("x", x)
+        int_validator("y", y)
+        
         self.width = width
         self.height = height
         self.x = x
@@ -59,10 +64,11 @@ class Rectangle(Base):
         the width of an object. It is expected to be
         an integer value greater than zero
         """
-        if type(width) is not int:
+        '''if type(width) is not int:
             raise TypeError(f'width must be an intger')
         if width <= 0:
-            raise ValueError('width must be > 0')
+            raise ValueError('width must be > 0')'''
+        int_validator("width", width)
         self.__width = width
 
     @property
@@ -87,10 +93,12 @@ class Rectangle(Base):
         be raised. If it is less than or equal to 0, a
         ValueError will be raised. Otherwise, the
         """
-        if type(height) is not int:
+        '''if type(height) is not int:
             raise TypeError('height must be an intger')
         if height <= 0:
-            raise ValueError('height must be > 0')
+            raise ValueError('height must be > 0')'''
+        int_validator("height", height)
+
         self.__height = height
 
     @property
@@ -114,10 +122,12 @@ class Rectangle(Base):
         that represents a value to be assigned to the
         attribute "__x" of an object
         """
-        if type(x) is not int:
+        '''if type(x) is not int:
             raise TypeError("x must be an integer")
         if x < 0:
-            raise ValueError('x must be >= 0')
+            raise ValueError('x must be >= 0')'''
+        int_validator("x", x)
+
         self.__x = x
 
     @property
@@ -141,10 +151,12 @@ class Rectangle(Base):
         represents a coordinate or position on a vertical
         axis
         """
-        if type(y) is not int:
+        ''' if type(y) is not int:
             raise TypeError("y must be an integer")
         if y < 0:
-            raise ValueError('y must be >= 0')
+            raise ValueError('y must be >= 0')'''
+        int_validator("y", y)
+
         self.__y = y
 
     def area(self):
