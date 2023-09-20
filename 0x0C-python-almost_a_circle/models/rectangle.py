@@ -8,7 +8,7 @@ from models.base import Base
 
 class Rectangle(Base):
     """ The Rectangle class is a subclass of the Base class."""
-    
+
     def int_validator(self, name, value):
         """
         The function `int_validator` checks if a given value
@@ -24,10 +24,10 @@ class Rectangle(Base):
         the function specifically checks if it is an integer.
         """
         if type(value) is not int:
-                raise TypeError(f'{name} must be an intger')
+            raise TypeError(f'{name} must be an intger')
         elif name in ["width", "height"]:
-                if value <= 0:
-                    raise ValueError(f'{name} must be > 0')
+            if value <= 0:
+                raise ValueError(f'{name} must be > 0')
         elif name in ["x", "y"]:
             if value < 0:
                 raise ValueError(f'{name} must be >= 0')
@@ -66,7 +66,6 @@ class Rectangle(Base):
         self.__x = x
         self.__y = y
         super().__init__(id)
-
 
     @property
     def width(self):
@@ -137,7 +136,7 @@ class Rectangle(Base):
         that represents a value to be assigned to the
         attribute "__x" of an object
         """
-        
+
         self.int_validator("x", x)
 
         self.__x = x
