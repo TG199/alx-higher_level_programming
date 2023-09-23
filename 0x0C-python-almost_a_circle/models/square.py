@@ -52,10 +52,6 @@ class Square(Rectangle):
           size: The parameter "size" is the desired size for both the width
           and height of an object.
         """
-        if type(size) is not int:
-            raise TypeError("height must be an integer")
-        if size <= 0:
-            raise ValueError("height must be > 0")
         self.width = size
         self.height = size
 
