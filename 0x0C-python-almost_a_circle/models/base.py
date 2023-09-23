@@ -48,8 +48,8 @@ class Base:
           If the input list is None, an
         empty list is returned.
         """
-        if list_dictionaries is None:
-            return []
+        if list_dictionaries is None or list_dictionaries == "[]":
+            return "[]"
         return json.dumps(list_dictionaries)
 
     @classmethod
