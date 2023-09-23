@@ -170,7 +170,7 @@ class Rectangle(Base):
         the screen.
         :return: nothing (None).
         """
-        
+
         rectangle = self.y * "\n"
         for i in range(self.height):
             rectangle += (" " * self.x)
