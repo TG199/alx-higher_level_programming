@@ -170,7 +170,14 @@ class Rectangle(Base):
         the screen.
         :return: nothing (None).
         """
-        if self.width == 0 or self.height == 0:
+        
+        rectangle = self.y * "\n"
+        for i in range(self.height):
+            rectangle += (" " * self.x)
+            rectangle += ("#" * self.width) + "\n"
+
+        print(rectangle, end='')
+        ''' if self.width == 0 or self.height == 0:
             print("")
             return
 
@@ -182,7 +189,7 @@ class Rectangle(Base):
         for i in range(self.height):
             for j in range(self.width):
                 print("#", end="")
-            print()
+            print()'''
 
     def update(self, *args, **kwargs):
         """
