@@ -31,13 +31,6 @@ class Square(Rectangle):
         the same class. If no `id` is
         provided, it will default to `None`.
         """
-        # The line `super().__init__(size, size, x, y, id)` is calling
-        # the constructor of the parent
-
-        # class `Rectangle` and passing the arguments `size, size, x, y, id`
-        # to initialize the attributes of the `Square` object.
-        # This allows the `Square` class to inherit the attributes
-        # and methods of the `Rectangle` class.
         super().__init__(size, size, x, y, id)
 
     @property
@@ -59,6 +52,10 @@ class Square(Rectangle):
           size: The parameter "size" is the desired size for both the width
           and height of an object.
         """
+        if type(size) is not int:
+            raise TypeError("height must be an integer")
+        if size <= 0:
+            raise ValueError("height must be > 0")
         self.width = size
         self.height = size
 
@@ -107,6 +104,6 @@ class Square(Rectangle):
         str_square = "[Square] "
         str_id = "({}) ".format(self.id)
         str_xy = "{}/{} - ".format(self.x, self.y)
-        str_wh = "{}/{}".format(self.width, self.height)
+        str_wh = "{}".format(self.width)
 
         return str_square + str_id + str_xy + str_wh
