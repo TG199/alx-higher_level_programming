@@ -52,6 +52,18 @@ class Base:
             return "[]"
         return json.dumps(list_dictionaries)
 
+    @staticmethod
+    def from_json_string(json_string):
+        """
+        The function converts a JSON string into a Python object.
+
+        Args:
+          json_string: A string containing a JSON object or array.
+        """
+        if json_string is None or json_string == "[]":
+            return "[]"
+        return json.dumps(json_string)
+
     @classmethod
     def save_to_file(cls, list_objs):
         """
