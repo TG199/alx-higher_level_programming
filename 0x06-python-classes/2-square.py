@@ -4,12 +4,18 @@
 
 
 class Square:
-    """This class defines a square
-    """
+    """A class representing a Square """
 
     def __init__(self, size=0):
-        """This method initialises the attributes 'size'
-            and raises an exception if not int or >= 0
+        """
+        Initialize a rectangle instance
+
+        Args:
+            size(int): Size of the square
+
+        Raises:
+            TypeError: If size is not a int
+            ValueError: if size is < 0
         """
         if not isinstance(size, int):
             raise TypeError("size must be an integer")
@@ -17,11 +23,3 @@ class Square:
             raise ValueError("size must be >=  0")
         else:
             self.__size = size
-
-    def area(self):
-        """Calculate the area of the square.
-
-            Returns:
-                int: the area of the square
-        """
-        return self.__size ** 2
