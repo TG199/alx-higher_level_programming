@@ -5,6 +5,8 @@
 
 
 class Node:
+    """ Class representing a Node in a singly linked list """
+
     def __init__(self, data, next_node=None):
         """
         Initiaze a Node class
