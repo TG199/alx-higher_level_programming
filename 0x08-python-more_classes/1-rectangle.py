@@ -39,7 +39,7 @@ class Rectangle:
         Args:
             value(int): value to set as width size
         """
-        if type(value) not int:
+        if type(value) is not int:
             raise TypeError('width must be an integer')
         elif value < 0:
             raise ValueError('width must be >= 0')
@@ -63,7 +63,7 @@ class Rectangle:
         Args:
             value(int): value to set as height size
         """
-        if type(value) not int:
+        if type(value) is not int:
             raise TypeError('width must be an integer')
         elif value < 0:
             raise ValueError('height must be >= 0')
