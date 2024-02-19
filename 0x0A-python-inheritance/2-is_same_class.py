@@ -1,4 +1,6 @@
 #!/usr/bin/python3
+""" A function that checks the type of an object """
+
 
 def is_same_class(obj, a_class):
     """ Checks if obj is of type a_class
