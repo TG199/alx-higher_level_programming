@@ -1,10 +1,7 @@
 >>> class MyList(list):
-...     """ Sub class that inherent from list
-...     """
+...     """ Represent a List class """
 ...     def print_sorted(self):
-...         """ Prints list in sorted manner
-...         """
-...         print("{}".format(sorted(self)))
+...             print(sorted(self))
 ...
 >>> my_list = MyList([2, 4, 1, 3])
 >>> my_list.print_sorted()
