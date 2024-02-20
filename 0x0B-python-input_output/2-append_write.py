@@ -2,6 +2,7 @@
 """Write to file
 """
 
+
 def append_write(filename="", text=""):
     """appends a string at the end of a text file (UTF8) and
     returns the number of characters added
@@ -13,7 +14,7 @@ def append_write(filename="", text=""):
     Returns: No of characters appended
     """
     with open(filename, mode="a", encoding="utf-8") as file:
-        chars_appended = 0;
+        chars_appended = 0
         append_to_file = file.write(text)
 
         for i in range(append_to_file):
