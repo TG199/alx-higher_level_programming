@@ -60,4 +60,3 @@ class Square(Rectangle):
         """String representation of the class instance.
         """
         return '[Square] {}/{}'.format(self.__size, self.__size)
-
