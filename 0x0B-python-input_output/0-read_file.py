@@ -1,15 +1,12 @@
 #!/usr/bin/python3
-""" This module is about reading from a file"""
+"""Reads a text
+"""
 
 
 def read_file(filename=""):
-    """Opens a file in read mode and print its content
-        to standard output
+    """Reads content of a file
     Args:
-        filename: Name of file to read
-
-    Returns: Number of bytes read
+        filename(textfile)
     """
-    with open(filename, mode='r', encoding='utf-8') as file:
-        content = file.read()
-        print(content, end='')
+    with open(filename, mode="r", encoding="utf-8") as file:
+        print(file.read(), end="")
