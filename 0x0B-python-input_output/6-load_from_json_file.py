@@ -4,7 +4,6 @@
 import json
 
 
-
 def load_from_json_file(filename):
     """Convert Json object in a file to python object
     Args:
