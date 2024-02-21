@@ -1,30 +1,33 @@
 #!/usr/bin/python3
-"""This module is about student class """
+""" A student module
+"""
 
 
 class Student:
-    """Defines a student class"""
-    def __init__(self, first_name, last_name, age):
-        """Initialize class attributes
+    """ Represents a Student class"""
 
+    def __init__(self, first_name, last_name, age):
+        """Initializes all attributes
         Args:
-            first_name: firstname attribute
-            last_name: Last_name attribute
-            age: age attribute
+            first_name: First name of student
+            last_name: Last name of student
+            age: Age of student
         """
         self.first_name = first_name
         self.last_name = last_name
         self.age = age
 
     def to_json(self, attrs=None):
-        """retrieves a dictionary representation of a Student instance
-
-        Returns: student class JSON
+        """ retrieves a dictionary representation of a Student
+        Args:
+            attrs: list of attributes
         """
-        if attrs is not None:
-            return {
-                    attr: getattr(self, attr)
-                    for attr in attrs if hasattr(self, attr)
-                    }
-
-        return self.__dict__
+        res = {}
+        if hasattr(self, "__dict__"):
+            if attrs is None:
+                res = self.__dict__.copy()
+            elif (isinstance(attrs, list)):
+                for attr in attrs:
+                    if hasattr(self, attr):
+                        res[attr] = getattr(self, attr)
+        return res
