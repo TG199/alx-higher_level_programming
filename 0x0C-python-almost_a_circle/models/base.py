@@ -88,6 +88,8 @@ class Base:
             return new
 
     def load_from_file(cls):
+        """ Load form file
+        """
         file_name = f'{cls.__name__}.json'
 
         if os.path.exists(file_name) is False:
