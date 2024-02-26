@@ -80,12 +80,13 @@ class Base:
             dictionary: dictionary containing dictionaries
         Returns: An instance with all attributes already set
         """
-        if cls.__name__ == "Rectangle":
-            new = cls(10, 10)
+        if 'size' in dictionary:
+            dummy = Square(1)
         else:
-            new = cls(10)
-            new.update(**dictionary)
-            return new
+            dummy = Rectangle(1, 1)
+
+        dummy.update(**dictionary)
+        return dummy
 
     def load_from_file(cls):
         """ Load form file
