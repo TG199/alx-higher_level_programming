@@ -13,16 +13,19 @@ class Square(Rectangle):
 
     @property
     def size(self):
+        """ Get size of square """
         return self.width
-    
+
     @size.setter
     def size(self, value):
+        """ Set size of square """
         int_validator("width", value)
         self.width = value
         int_validator("height", value)
         self.height = value
 
     def update(self, *args, **kwargs):
+        """ Update instance """
         if args is not None and len(args) != 0:
             list_attr = ['id', 'size', 'x', 'y']
             for i in range(len(args)):
@@ -33,6 +36,7 @@ class Square(Rectangle):
                 setattr(self, k, v)
 
     def to_dictionary(self):
+        """ Create dictionary object """
         return {
             'id': self.id,
             'size': self.width,
@@ -40,10 +44,6 @@ class Square(Rectangle):
             'y': self.y
             }
 
-        
-
     def __str__(self):
+        """ representation of class """
         return f'[Square] ({self.id}) {self.x}/{self.y} - {self.width}'
-
-
-

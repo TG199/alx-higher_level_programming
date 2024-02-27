@@ -124,6 +124,7 @@ class Rectangle(Base):
                 setattr(self, k, v)
 
     def to_dictionary(self):
+        """ Create dictionary object"""
         return {
             'id': self.id,
             'x': self.x,
