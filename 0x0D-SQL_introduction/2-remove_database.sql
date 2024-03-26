@@ -1,3 +1,3 @@
 -- Delete table
-DELETE TABLE IF TABLE  hbtn_0c_0;
+DROP TABLE IF EXISTS hbtn_0c_0;
 
