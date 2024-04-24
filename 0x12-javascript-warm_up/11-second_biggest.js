@@ -3,7 +3,6 @@
 if (process.argv[2] === undefined || process.argv[3] === undefined) {
   console.log(0);
 } else {
-
   let max1 = parseInt(process.argv[2]);
   let max2 = parseInt(process.argv[3]);
 
