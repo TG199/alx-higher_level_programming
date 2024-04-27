@@ -1,15 +1,13 @@
 #!/usr/bin/python3
+"""lists all states from the database hbtn_0e_0_usa"""
 import MySqldb
 import sys
 
 
 def list_states(username, password, dbname):
 
-    db = MySQLdb.connect(host="localhost",
-        user=username,
-        passwd=password,
-        db=dbname,
-        port=3306)
+    db = MySQLdb.connect(host="localhost", user=username,
+                         passwd=password, db=dbname, port=3306)
 
     cursor = db.cursor()
 
