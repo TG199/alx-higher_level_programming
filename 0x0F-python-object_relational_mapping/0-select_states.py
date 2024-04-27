@@ -2,7 +2,7 @@
 """
 lists all states from the database hbtn_0e_0_usa
 """
-import MySqldb
+import MySQLdb
 import sys
 
 
