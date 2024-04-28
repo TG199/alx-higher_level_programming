@@ -16,7 +16,7 @@ if __name__ == '__main__':
     FROM states \
     WHERE CONVERT(`name` USING latin1) \
     COLLATE latin1_General_CS = '{}';".format(sys.argv[4]))
-    states. cursor.fetchall()
+    states = cursor.fetchall()
 
     for state in states:
         print(state)
