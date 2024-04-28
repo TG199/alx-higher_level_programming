@@ -14,7 +14,7 @@ if __name__ == '__main__':
     cursor = db.cursor()
     cursor.execute("SELECT cities.id, cities.name, states.name \
     FROM cities JOIN states ON cities.state_id = states.id;")
-    states = cursor.fetchall()
+    cities = cursor.fetchall()
 
-    for state in states:
-        print(state)
+    for city in cities:
+        print(city)
