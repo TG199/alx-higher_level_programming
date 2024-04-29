@@ -5,7 +5,7 @@ from the database hbtn_0e_6_usa
 """
 import sys
 from sqlalchemy import create_engine
-from model_stae import Base, State
+from model_state import Base, State
 from sqlalchemy.orm import sessionmaker
 
 
