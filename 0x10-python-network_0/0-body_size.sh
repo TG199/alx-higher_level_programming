@@ -7,6 +7,4 @@ if [ $# -lt 1 ]; then
 fi
 
 URL=$1
-sz="%{size_download}\n"
-
-curl -s -o /dev/null -w "$sz" "$URL";
+curl -sI "$URL" | grep "Content-Length:" | cut -d " " -f 2;
