@@ -3,8 +3,8 @@
 const request = require('request');
 const fs = require('fs');
 
-request(process.argv[2], function (error, response) {
+request(process.argv[2], function (error, response, body) {
   if (!error) {
-    fs.writeFileSync(process.argv[3], response.message, 'utf-8');
+    fs.writeFileSync(process.argv[3], body, 'utf-8');
   }
 });
